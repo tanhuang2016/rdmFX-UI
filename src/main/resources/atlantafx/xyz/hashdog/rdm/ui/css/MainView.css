@@ -1,0 +1,36 @@
+
+
+/*@import '../fonts/Fonts.css';*/
+@import 'Colors.css';
+@import 'Font.css';
+
+/**************************************************
+ * Root
+**************************************************/
+/** {*/
+/*    -fx-opacity: 0.8;*/
+/*}*/
+
+/*通过背景色设置透明度，不会影响子节点*/
+.rootPane {
+    -fx-background-color: rgba(255, 255, 255, 1);
+}
+
+#topMenuBar{
+    /*-fx-background-color: #191622;*/
+    -fx-background-color: red;
+
+}
+.topMenu{
+    /*-fx-background-color: red;*/
+}
+
+#topMenuBar .menu .label
+{
+    -fx-text-fill: white; /* 设置文本颜色为白色 */
+
+}
+
+/*.context-menu .menu-item .label {*/
+/*    -fx-text-fill: blue;*/
+/*}*/

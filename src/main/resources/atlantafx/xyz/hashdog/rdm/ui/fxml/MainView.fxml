@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+
+<AnchorPane  fx:id="rootPane" fx:controller="atlantafx.xyz.hashdog.rdm.ui.controller.MainController"
+            prefHeight="675.0" prefWidth="1200.0" styleClass="rootPane" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1"   stylesheets="@../css/MainView.css">
+    <children>
+        <BorderPane  layoutX="214.0" layoutY="112.0" prefHeight="675.0" prefWidth="1200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <center>
+                <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                    <children>
+                        <TabPane fx:id="serverTabPane" layoutX="160.0" layoutY="73.0" prefHeight="650.0" prefWidth="1200.0" tabClosingPolicy="ALL_TABS" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                            <tabs>
+                                <!--<Tab text="redis1">
+                                    <content>
+                                        <fx:include source="ServerTabView.fxml" />
+
+                                    </content>
+                                </Tab>
+                                <Tab text="redis2">
+                                    <content>
+                                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                                    </content>
+                                </Tab>-->
+                            </tabs>
+                        </TabPane>
+                    </children>
+                </AnchorPane>
+            </center>
+            <top>
+                <MenuBar fx:id="topMenuBar"  BorderPane.alignment="CENTER" >
+                    <menus>
+                        <Menu mnemonicParsing="false" text="%main.file" styleClass="topMenu" >
+                            <items >
+                                <MenuItem mnemonicParsing="false" text="%main.file.connect" styleClass="topMenu" />
+                                <MenuItem mnemonicParsing="false" text="%main.file.connect" styleClass="topMenu" />
+                                <MenuItem mnemonicParsing="false" text="%main.file.connect" styleClass="topMenu" />
+                            </items>
+                        </Menu>
+                        <Menu mnemonicParsing="false" text="%main.edit" styleClass="topMenu">
+                            <items>
+                                <!--                    <MenuItem mnemonicParsing="false" text="Delete" />-->
+                            </items>
+                        </Menu>
+                        <Menu mnemonicParsing="false" text="%main.help" styleClass="topMenu">
+                            <items>
+                                <!--                    <MenuItem mnemonicParsing="false" text="About" />-->
+                            </items>
+                        </Menu>
+                    </menus>
+                </MenuBar>
+            </top>
+        </BorderPane>
+    </children>
+</AnchorPane>
