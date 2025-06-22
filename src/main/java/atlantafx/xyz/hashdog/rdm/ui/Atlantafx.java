@@ -3,6 +3,7 @@ package atlantafx.xyz.hashdog.rdm.ui;
 import atlantafx.base.theme.Dracula;
 import atlantafx.base.theme.PrimerDark;
 import atlantafx.base.theme.PrimerLight;
+import atlantafx.sampler.theme.SamplerTheme;
 import atlantafx.sampler.theme.ThemeManager;
 import atlantafx.xyz.hashdog.rdm.ui.controller.MainController;
 import javafx.application.Application;
@@ -51,8 +52,6 @@ public class Atlantafx extends Application {
         ThemeManager TM = ThemeManager.getInstance();
         TM.setScene(scene);
 //        TM.setFontFamily(ThemeManager.DEFAULT_FONT_FAMILY_NAME );
-        TM.setFontFamily("Calibri" );
-        TM.setFontFamily("Comic Sans MS" );
 
         TM.setTheme(TM.getDefaultTheme());
         stage.show();
@@ -70,5 +69,20 @@ public class Atlantafx extends Application {
         menuBar.setOnMouseReleased(e->{
             root.setOpacity(1);
         });
+
+        TM.setFontFamily("Calibri" );
+        TM.setFontFamily("Comic Sans MS" );
+        TM.setFontFamily(ThemeManager.DEFAULT_FONT_FAMILY_NAME);
+        TM.setTheme(new SamplerTheme(new Dracula()));
+
+//        TM.setFontSize(8);
+    }
+
+    @Override
+    public void init() throws Exception {
+//        DEFAULT_LOCALE= new Locale("en", "US");
+//        DEFAULT_LOCALE=Locale.JAPAN;
+        DEFAULT_LOCALE=Locale.US;
+        RESOURCE_BUNDLE=ResourceBundle.getBundle(BASE_NAME, DEFAULT_LOCALE);
     }
 }
