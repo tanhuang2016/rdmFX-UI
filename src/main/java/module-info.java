@@ -8,6 +8,7 @@ module rdmFX.UI {
     opens atlantafx.xyz.hashdog.rdm.ui to javafx.graphics, javafx.controls;
     // 新增导出语句
     exports atlantafx.xyz.hashdog.rdm.ui.controller to javafx.fxml;
+    exports atlantafx.xyz.hashdog.rdm.ui to javafx.fxml;
     // 新增开放语句
     opens atlantafx.xyz.hashdog.rdm.ui.controller to javafx.fxml;
 

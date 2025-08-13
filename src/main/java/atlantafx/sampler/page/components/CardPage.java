@@ -102,6 +102,7 @@ public class CardPage extends OutlinePage {
         tweetCard.setMaxWidth(300);
 
         var title = new Label(FAKER.twitter().userName());
+        title.setGraphic(new FontIcon(Material2AL.FAVORITE));
         title.getStyleClass().add(Styles.TITLE_4);
         tweetCard.setHeader(title);
 
