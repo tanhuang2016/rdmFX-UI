@@ -7,7 +7,7 @@ import java.nio.file.StandardCopyOption;
 
 public class RenameUtil {
     public static void main(String[] args) {
-        String path="C:\\Users\\Administrator\\Downloads\\2.0";
+        String path="C:\\Users\\Administrator\\Downloads\\2.2.1";
         renameAndMoveFiles(path);
     }
 
@@ -99,7 +99,7 @@ public class RenameUtil {
                 extension = originalName.substring(dotIndex);
                 originalName = originalName.substring(0, dotIndex);
             }
-            originalName="rdm-ui-2.0.0-";
+            originalName="rdm-ui-2.2.1-";
             // 构造新文件名：目录B名称_原文件名.扩展名
             String newName = originalName+prefix  + extension;
             Path targetPath = targetDir.resolve(newName);
