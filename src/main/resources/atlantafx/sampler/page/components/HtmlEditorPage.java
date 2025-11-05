@@ -14,7 +14,7 @@ import javafx.css.PseudoClass;
 import javafx.geometry.Pos;
 import javafx.scene.layout.Priority;
 import javafx.scene.layout.VBox;
-import javafx.scene.web.HTMLEditor;
+//import javafx.scene.web.HTMLEditor;
 
 import java.net.URI;
 

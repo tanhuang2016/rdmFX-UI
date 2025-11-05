@@ -15,7 +15,7 @@ import javafx.css.PseudoClass;
 import javafx.geometry.Pos;
 import javafx.scene.layout.Priority;
 import javafx.scene.layout.VBox;
-import javafx.scene.web.HTMLEditor;
+//import javafx.scene.web.HTMLEditor;
 
 public final class HtmlEditorPage extends AbstractPage {
 
@@ -33,7 +33,7 @@ public final class HtmlEditorPage extends AbstractPage {
         return URI.create("https://openjfx.io/javadoc/20/javafx.web/javafx/scene/web/HTMLEditor.html");
     }
 
-    private HTMLEditor editor = createHtmlEditor();
+//    private HTMLEditor editor = createHtmlEditor();
 
     public HtmlEditorPage() {
         super();
@@ -43,57 +43,57 @@ public final class HtmlEditorPage extends AbstractPage {
             A control that allows for users to edit text, and apply styling to this text. \
             The underlying data model is HTML, although this is not shown visually to the end-user."""
         );
-        addNode(editorSample());
+//        addNode(editorSample());
 
         // update editor colors on app theme change
         DefaultEventBus.getInstance().subscribe(ThemeEvent.class, e -> {
             if (ThemeManager.getInstance().getTheme() != null) {
-                editor.setHtmlText(generateContent());
-                editor.requestFocus();
+//                editor.setHtmlText(generateContent());
+//                editor.requestFocus();
             }
         });
 
-        editor.requestFocus();
+//        editor.requestFocus();
     }
 
-    private VBox editorSample() {
-        var description = BBCodeParser.createFormattedText("""
-            Since AtlantaFX themes are also distributed as CSS files, they can't contain any images. \
-            Unfortunately, reusing Modena resources in theme also isn't possible, because the they \
-            are located in [font=monospace]'com/sun/javafx/*'[/font] package, which isn't opened in \
-            OpenJFX [font=monospace]'module-info'[/font]. But you can still copy Modena images and \
-            overwrite [i]HMTLEditor[/i] CSS in your app."""
-        );
+//    private VBox editorSample() {
+//        var description = BBCodeParser.createFormattedText("""
+//            Since AtlantaFX themes are also distributed as CSS files, they can't contain any images. \
+//            Unfortunately, reusing Modena resources in theme also isn't possible, because the they \
+//            are located in [font=monospace]'com/sun/javafx/*'[/font] package, which isn't opened in \
+//            OpenJFX [font=monospace]'module-info'[/font]. But you can still copy Modena images and \
+//            overwrite [i]HMTLEditor[/i] CSS in your app."""
+//        );
+//
+//        var fixToggle = new ToggleSwitch("Apply Fix");
+//
+//        var content = new VBox(20, editor, description, fixToggle);
+//        content.setAlignment(Pos.TOP_CENTER);
+//        VBox.setVgrow(content, Priority.ALWAYS);
+//
+//        fixToggle.selectedProperty().addListener((obs, old, val) -> {
+//            // toolbar icons can't be changed back without creating new editor instance #javafx-bug
+//            try {
+//                editor = createHtmlEditor();
+//                editor.pseudoClassStateChanged(USE_LOCAL_URL, val);
+//                content.getChildren().set(0, editor);
+//                editor.requestFocus();
+//            } catch (Exception ignored) {
+//                // hush internal HTML editor errors, because everything
+//                // we do here is an ugly hack around legacy control anyway
+//            }
+//        });
+//
+//        return content;
+//    }
 
-        var fixToggle = new ToggleSwitch("Apply Fix");
-
-        var content = new VBox(20, editor, description, fixToggle);
-        content.setAlignment(Pos.TOP_CENTER);
-        VBox.setVgrow(content, Priority.ALWAYS);
-
-        fixToggle.selectedProperty().addListener((obs, old, val) -> {
-            // toolbar icons can't be changed back without creating new editor instance #javafx-bug
-            try {
-                editor = createHtmlEditor();
-                editor.pseudoClassStateChanged(USE_LOCAL_URL, val);
-                content.getChildren().set(0, editor);
-                editor.requestFocus();
-            } catch (Exception ignored) {
-                // hush internal HTML editor errors, because everything
-                // we do here is an ugly hack around legacy control anyway
-            }
-        });
-
-        return content;
-    }
-
-    private HTMLEditor createHtmlEditor() {
-        var editor = new HTMLEditor();
-        editor.setPrefHeight(400);
-        editor.setHtmlText(generateContent());
-        VBox.setVgrow(editor, Priority.ALWAYS);
-        return editor;
-    }
+//    private HTMLEditor createHtmlEditor() {
+//        var editor = new HTMLEditor();
+//        editor.setPrefHeight(400);
+//        editor.setHtmlText(generateContent());
+//        VBox.setVgrow(editor, Priority.ALWAYS);
+//        return editor;
+//    }
 
     private String generateContent() {
         var tm = ThemeManager.getInstance();

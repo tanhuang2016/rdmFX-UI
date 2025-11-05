@@ -16,7 +16,7 @@ import javafx.geometry.Insets;
 import javafx.scene.control.Button;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.paint.Color;
-import javafx.scene.web.WebView;
+//import javafx.scene.web.WebView;
 import org.kordamp.ikonli.javafx.FontIcon;
 import org.kordamp.ikonli.material2.Material2AL;
 
@@ -28,7 +28,7 @@ final class CodeViewer extends AnchorPane {
     private static final String HLJS_LN_LIB = "assets/highlightjs/highlightjs-line-numbers.min.js";
     private static final String HLJS_LN_CSS = ".hljs-ln-numbers { padding-right: 20px !important;;}";
 
-    private WebView webView;
+//    private WebView webView;
 
     public CodeViewer() {
         super();
@@ -46,11 +46,11 @@ final class CodeViewer extends AnchorPane {
     }
 
     private void lazyLoadWebView() {
-        if (webView == null) {
-            webView = new WebView();
-            NodeUtils.setAnchors(webView, Insets.EMPTY);
-            getChildren().add(0, webView);
-        }
+//        if (webView == null) {
+//            webView = new WebView();
+//            NodeUtils.setAnchors(webView, Insets.EMPTY);
+//            getChildren().add(0, webView);
+//        }
     }
 
     @SuppressWarnings("StringBufferReplaceableByString")
@@ -80,8 +80,8 @@ final class CodeViewer extends AnchorPane {
                 .append("</html>")
                 .toString();
 
-            webView.setPageFill(Color.TRANSPARENT);
-            webView.getEngine().loadContent(content);
+//            webView.setPageFill(Color.TRANSPARENT);
+//            webView.getEngine().loadContent(content);
         } catch (IOException e) {
             throw new RuntimeException(e);
         }

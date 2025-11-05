@@ -18,7 +18,7 @@ module rdmFX.UI {
     requires java.prefs;
     requires javafx.swing;
     requires javafx.media;
-    requires javafx.web;
+//    requires javafx.web;
 //    requires javafx.fxml;
     requires jdk.zipfs;
 
@@ -30,6 +30,7 @@ module rdmFX.UI {
 
     requires fr.brouillard.oss.cssfx;
     requires datafaker;
+    requires com.google.gson;
 
     exports atlantafx.sampler;
     exports atlantafx.sampler.fake.domain;
