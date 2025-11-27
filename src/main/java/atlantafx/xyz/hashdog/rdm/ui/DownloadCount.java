@@ -64,7 +64,12 @@ public class DownloadCount {
      * @return 下载总量
      */
     public long getRedisFXDownloadCount() {
-        return getGitHubDownloadCount("tanhuang2016", "RedisFX");
+//        return getGitHubDownloadCount("tanhuang2016", "RedisFX");
+//        return getGitHubDownloadCount("catas-w", "WK-Proxy");
+//        return getGitHubDownloadCount("vran-dev", "PrettyZoo");
+//        return getGitHubDownloadCount("864381832", "xJavaFxTool");
+//        return getGitHubDownloadCount("dromara", "RedisFront");
+        return getGitHubDownloadCount("lakernote", "EasyPostman");
     }
 
     public static void main(String[] args) {
